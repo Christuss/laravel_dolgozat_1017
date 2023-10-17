@@ -46,4 +46,8 @@ class ClubController extends Controller
         $clubs = Club::all();
         return view('club.list', ['clubs' => $clubs]);
     }
+    public function deleteView(){
+        $clubs = Club::all();
+        return view('club.delete', ['clubs' => $clubs]);
+    }
 }
