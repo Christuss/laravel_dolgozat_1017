@@ -9,9 +9,11 @@ class ClubController extends Controller
 {
     public function index(){
         $clubs = response()->json(Club::all());
+        return $clubs;
     }
     public function show($id){
         $clubs = response()->json(Club::find($id));
+        return $clubs;
     }
     public function destroy($id){
         Club::find($id)->delete();
